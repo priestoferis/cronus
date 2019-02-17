@@ -22,7 +22,7 @@ As of now, Cronus implements two features:
 * Allows a continuous while loop to run at a fixed frequency
 
 ```python
-import cronus.beat as beat
+from cronus.beat import Beat
 import time
 import datetime
 
@@ -31,6 +31,7 @@ def do_some_work():
 
 if __name__ == "__main__":
     # specify rate in Hz
+    beat = Beat()
     beat.set_rate(2)
     while beat.true():
         do_some_work()
